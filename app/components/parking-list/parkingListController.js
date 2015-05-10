@@ -2,7 +2,7 @@
 
     var app = angular.module("list", []);
 
-    app.directive("listDirective", function () {
+    app.directive("parkingList", function () {
         return {
             restrict: "E",
             templateUrl: "/myParking/app/components/parking-list/parking-list.html",

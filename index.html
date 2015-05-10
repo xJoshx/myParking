@@ -2,10 +2,8 @@
 <html ng-app="parking">
 
 <head>
-    <link href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-    <script src="app/app.js"></script>
-    <script src="app/components/parking-list/parkingListController.js"></script>
 </head>
 
 <body>
@@ -14,14 +12,22 @@
         <input type="text" ng-model="yourName" placeholder="Enter a name here">
         <hr>
         <h1>Hello {{yourName}}!</h1>
-        <list-directive></list-directive>
+
+        <!-- The sidebar with a search input -->
+        <parking-search></parking-search>
+        <parking-sidebar></parking-sidebar>
+
+        <!-- The list -->
+        <parking-list></parking-list>
+
     </div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/components/parking-list/parkingListController.js"></script>
+    <script src="app/shared/search/parkingSearchController.js"></script>
+    <script src="app/shared/sidebar/parkingSidebarController.js"></script>
+    <script src="assets/js/sidebar.js"></script>
 </body>
 
 </html>
-
-<!--<parking-topbar></parking-topbar>
-    <parking-sidebar>
-        <parking-search></parking-search>
-    </parking-sidebar>-->
-<!--<parkingList></parkingList>-->
