@@ -2,11 +2,19 @@
 
     //var app = angular.module("parking", ["components/parking-list/parkingListController"]);
 
-    var app = angular.module('parking', ["list"]);
+    var app = angular.module('parking', ["list", "search", "sidebar"]);
 
     app.controller("ListController", function () {
         this.vehicles = vehicles;
         this.levels = levels;
+    });
+
+    app.controller("SidebarController", function () {
+        this.levels = levels;
+    });
+
+    app.controller("SearchController", function () {
+
     });
 
     var vehicles = [
