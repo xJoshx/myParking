@@ -7,10 +7,10 @@
         this.levels = levels;
     });
 
-    app.directive("ListDirective", function () {
+    app.directive("listDirective", function () {
         return {
             restrict: "E",
-            templateUrl: "parking-list.html",
+            templateUrl: "/myParking/app/components/parking-list/parking-list.html",
             controller: "ListController",
             controllerAs: "List"
         };

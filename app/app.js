@@ -2,20 +2,11 @@
 
     //var app = angular.module("parking", ["components/parking-list/parkingListController"]);
 
-    var app = angular.module('parking', []);
+    var app = angular.module('parking', ["list"]);
 
     app.controller("ListController", function () {
         this.vehicles = vehicles;
         this.levels = levels;
-    });
-
-    app.directive("listDirective", function () {
-        return {
-            restrict: "E",
-            templateUrl: "/myParking/app/components/parking-list/parking-list.html",
-            controller: "ListController",
-            controllerAs: "List"
-        };
     });
 
     var vehicles = [
