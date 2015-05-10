@@ -1,24 +1,26 @@
-<!DOCTYPE html>
-<html ng-app="myparking">
-  <head>
-    <meta charset="utf-8"/>
-    <title>myparking</title>
-    <!-- inject:vendor:css -->
-    <!-- endinject -->
-    <!-- inject:css -->
-    <!-- endinject -->
-  </head>
-  <body>
-    <h1>myparking</h1>
-    <h2>Your new AngularJS app is now ready...</h2>
-    <parking-topbar></parking-topbar>
+<!doctype html>
+<html ng-app="parking">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <!--<script src="app/components/parking-list/parkingListController.js"></script>-->
+</head>
+
+<body>
+    <div>
+        <label>Name:</label>
+        <input type="text" ng-model="yourName" placeholder="Enter a name here">
+        <hr>
+        <h1>Hello {{yourName}}!</h1>
+        <list-directive></list-directive>
+    </div>
+</body>
+
+</html>
+
+<!--<parking-topbar></parking-topbar>
     <parking-sidebar>
         <parking-search></parking-search>
-    </parking-sidebar>
-    <parking-list></parking-list>
-    <!-- inject:vendor:js -->
-    <!-- endinject -->
-    <!-- inject:js -->
-    <!-- endinject -->
-  </body>
-</html>
+    </parking-sidebar>-->
+<!--<parkingList></parkingList>-->

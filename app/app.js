@@ -1,10 +1,22 @@
-(function(){
+(function () {
 
-    var app = angular.module("parking", []);
+    //var app = angular.module("parking", ["components/parking-list/parkingListController"]);
 
-    app.controller("ListController", function(){
+    var app = angular.module('parking', []);
+
+    app.controller("ListController", function () {
         this.vehicles = vehicles;
         this.levels = levels;
+    });
+
+    app.directive("ListDirective", function () {
+        return {
+            restrict: "E",
+            //templateUrl: "parking-list.html",
+            templateUrl: "<span>Prueba</span>",
+            controller: "ListController",
+            controllerAs: "List"
+        };
     });
 
     var vehicles = [
@@ -21,7 +33,6 @@
             level: 1
         }
     ];
-
     var levels = [
         {
             level: 1,
@@ -29,4 +40,4 @@
             placesFree: 500
         }
     ];
-});
+})();
