@@ -2,11 +2,6 @@
 
     var app = angular.module("list", []);
 
-    app.controller("ListController", function () {
-        this.vehicles = vehicles;
-        this.levels = levels;
-    });
-
     app.directive("listDirective", function () {
         return {
             restrict: "E",

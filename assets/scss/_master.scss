@@ -2,12 +2,7 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 @import "base/base";
-
 //General components
-
 //Main styles
-@import "../shared/search/search";
-@import "../shared/sidebar/sidebar";
-
-
-
+@import "../../app/shared/search/search";
+@import "../../app/shared/sidebar/sidebar";
