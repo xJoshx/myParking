@@ -1,1 +1,6 @@
-@import "master"
+@import "master";
+
+body {
+    padding: 20px;
+    @include outer-container;
+}
