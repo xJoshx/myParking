@@ -1,8 +1,14 @@
 <div class="main">
+    <input type="text" placeholder="Search vehicles" ng-model="query">
     <table>
-        <thead></thead>
+        <thead>
+            <th>Id</th>
+            <th>Type</th>
+            <th>Slot</th>
+            <th>Level</th>
+        </thead>
         <tbody>
-            <tr ng-repeat="vehicle in List.vehicles">
+            <tr ng-repeat="vehicle in List.vehicles" | filter:query | orderBy: 'vehicle.id' >
                 <td>{{vehicle.id}}</td>
                 <td>{{vehicle.type}}</td>
                 <td>{{vehicle.slot}}</td>
