@@ -8,7 +8,7 @@
             <th>Level</th>
         </thead>
         <tbody>
-            <tr ng-repeat="vehicle in List.vehicles" | filter:query | orderBy: 'vehicle.id' >
+            <tr ng-repeat="vehicle in List.vehicles | filter:query | orderBy: vehicle.id">
                 <td>{{vehicle.id}}</td>
                 <td>{{vehicle.type}}</td>
                 <td>{{vehicle.slot}}</td>
