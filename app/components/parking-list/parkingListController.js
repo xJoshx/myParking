@@ -2,13 +2,12 @@
 
     var app = angular.module("list", []);
 
-    app.controller("ListController", ["$scope", function ($scope) {
-        this.vehicles = parking_status.vehicles;
-        this.levels = parking_status.levels;
+    app.controller("ListController",["$scope", function ($scope) {
+        $scope.vehicles = parking_status.vehicles;
+        $scope.levels = parking_status.levels;
 
-        this.filterFunction = function(vehicles) {
-            return vehicles.id.match(/^Ma/) ? true : false;
-        };
+        $scope.sortType = "slot";
+        $scope.sortReverse = false;
     }]);
         //this.vehicles = JSON.parse(StorageManager.loadElement());
 

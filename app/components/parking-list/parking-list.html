@@ -2,13 +2,13 @@
     <input type="text" placeholder="Search vehicles" ng-model="query">
     <table>
         <thead>
-            <th>Id</th>
-            <th>Type</th>
-            <th>Slot</th>
-            <th>Level</th>
+            <th ng-click="sortType = 'id'; sortReverse = !sortReverse">Id</th>
+            <th ng-click="sortType = 'type'; sortReverse = !sortReverse">Type</th>
+            <th ng-click="sortType = 'slot'; sortReverse = !sortReverse">Slot</th>
+            <th ng-click="sortType = 'level'; sortReverse = !sortReverse">Level</th>
         </thead>
         <tbody>
-            <tr ng-repeat="vehicle in List.vehicles | filter:query | orderBy: vehicle.id">
+            <tr ng-repeat="vehicle in vehicles | filter:query | orderBy:sortType:sortReverse">
                 <td>{{vehicle.id}}</td>
                 <td>{{vehicle.type}}</td>
                 <td>{{vehicle.slot}}</td>
